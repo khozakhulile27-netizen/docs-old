@@ -29,6 +29,7 @@ const config: Config = {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/tscircuit/docs-old/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,39 +56,24 @@ const config: Config = {
         path: 'api-reference',
         routeBasePath: 'api-reference',
         sidebarPath: './sidebars.ts',
+        editUrl: 'https://github.com/tscircuit/docs-old/edit/main/',
       },
     ],
   ],
 
   themeConfig: {
     algolia: {
-      // The application ID provided by Algolia
       appId: 'YOUR_APP_ID',
-
-      // Public API key: it is safe to commit it
       apiKey: 'YOUR_SEARCH_API_KEY',
-
       indexName: 'YOUR_INDEX_NAME',
-
-      // Optional: see doc section below
       contextualSearch: true,
-
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      externalUrlRegex: 'external\\.com|domain\\.com',
-
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      externalUrlRegex: 'external\.com|domain\.com',
       replaceSearchResultPathname: {
-        from: '/docs/', // or as RegExp: /\/docs\//
+        from: '/docs/',
         to: '/',
       },
-
-      // Optional: Algolia search parameters
       searchParameters: {},
-
-      // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
-
-      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
     },
     navbar: {
@@ -98,7 +84,7 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar', // Matches the sidebar ID for "docs"
+          sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
         },
@@ -109,13 +95,13 @@ const config: Config = {
           docsPluginId: 'api'
         },
         {
-          href: 'mailto:contact@tscircuit.com',
-          label: 'Support',
+          href: 'https://tscircuit.com/editor',
+          label: 'Try Online',
           position: 'right',
         },
         {
-          href: 'https://tscircuit.com/trending',
-          label: 'Find Packages',
+          href: 'https://discord.com/invite/V7FGE5ZCbA',
+          label: 'Discord',
           position: 'right',
         },
         {
